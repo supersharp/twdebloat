@@ -1,0 +1,415 @@
+show_progress(1, 15);
+run_program("/sbin/busybox", "mount", "/system");
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#           Welcome to the Touchwiz            #");
+ui_print("#             De-bloating script               #");
+ui_print("#             Marshmallow Edition              #");
+ui_print("#                    V2                        #");
+ui_print("#                                              #");
+ui_print("#            Created by Battlehero             #");
+ui_print("#               @XDA-Developers                #");
+ui_print("#                                              #");
+ui_print("#                 Disclaimer:                  #");
+ui_print("#   By flashing this you accept responsiblity  #");
+ui_print("#   for anything that happens to your device   #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+show_progress(1.000000, 0);
+
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#      Commencing the de-bloating process      #");
+ui_print("#                                              #");
+ui_print("#      First target located > /system/app/     #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+set_progress(0.100000);
+
+# ------> Sound Detector < ------ #
+delete_recursive("/system/app/AdvSoundDetector2015");
+
+# ------> Allshare < ------ #
+delete_recursive("/system/app/AllShareCastPlayer");
+delete_recursive("/system/app/AllshareFileShare");
+delete_recursive("/system/app/AllshareFileShareClient");
+delete_recursive("/system/app/AllshareFileShareServer");
+delete_recursive("/system/app/AllshareMediaShare");
+
+# ------> Ant < ------ #
+delete_recursive("/system/app/AntHalService");
+delete_recursive("/system/app/ANTPlusPlugins");
+delete_recursive("/system/app/ANTPlusTest");
+delete_recursive("/system/app/ANTRadioService");
+
+# ------> Basic Dreams < ------ #
+delete_recursive("/system/app/BasicDreams");
+
+# ------> Beacon and Beam Service < ------ #
+delete_recursive("/system/app/BeaconManager_40");
+delete_recursive("/system/app/BeamService");
+delete_recursive("/system/app/BCService");
+
+# ------> Contact Add Ons < ------ #
+delete_recursive("/system/app/CoreApps");
+
+# ------> Digital Clock < ------ #
+delete_recursive("/system/app/DigitalClockEasy_MOSUP");
+delete_recursive("/system/app/DigitalClock_MOSUP");
+delete_recursive("/system/app/DualClockDigital_MOSUP");
+
+# ------> Easy Apps < ------ #
+delete_recursive("/system/app/EasymodeContactsWidget");
+delete_recursive("/system/app/EasySetup");
+delete_recursive("/system/priv-app/EasyLauncher2_Zero");
+
+# ------> Flipboard < ------ #
+delete_recursive("/system/app/FlipboardBriefing");
+
+# ------> Emergency Apps - Ultra Power Saving Mode < ------ #
+delete_recursive("/system/app/EmergencyLauncher");
+delete_recursive("/system/app/EmergencyModeService");
+delete_recursive("/system/app/EmergencyProvider");
+
+# ------> Car Mode - Link Apps < ------ #
+delete_recursive("/system/app/MobileTrackerEngineTwo");
+delete_recursive("/system/app/MirrorLink");
+delete_recursive("/system/app/Carmode_Del");
+delete_recursive("/system/app/SLocation");
+delete_recursive("/system/app/CarmodeStub");
+
+# ------> Optical Reader < ------ #
+delete_recursive("/system/app/OCRSeg4");
+
+# ------> Carrier Bookmarks < ------ #
+delete_recursive("/system/app/PartnerBookmarksProvider");
+
+delete_recursive("/system/app/Personalization");
+delete_recursive("/system/app/PhotoTable");
+
+# ------> Samsung Fonts < ------ #
+delete_recursive("/system/app/RoseEUKor");
+delete_recursive("/system/app/ChocoEUKor");
+delete_recursive("/system/app/CoolEUKor");
+
+# ------> SamsungTTS < ------ #
+delete_recursive("/system/app/SamsungTTS");
+
+# ------> SapaAudio < ------ #
+delete_recursive("/system/app/SapaAudioConnectionService");
+delete_recursive("/system/app/SapaMonitor");
+
+# ------> SBrowser < ------ #
+delete_recursive("/system/app/SBrowser_4_LATEST");
+
+# ------> Smartcard < ------ #
+delete_recursive("/system/priv-app/SmartcardManager");
+delete_recursive("/system/app/SmartcardService");
+
+# ------> SNote - Samsung PDF Reader < ------ #
+delete_recursive("/system/app/SNote5.0Preload");
+
+# ------> Samsung PDF Reader < ------ #
+delete_recursive("/system/app/SPdfNote");
+
+# ------> Email App < ------ #
+delete_recursive("/system/priv-app/SecEmail_M");
+
+# ------> Video Editor < ------ #
+delete_recursive("/system/app/VideoEditorLite_Hero");
+
+# ------> Printing Services < ------ #
+delete_recursive("/system/app/SPrintSpooler6");
+delete_recursive("/system/app/MobilePrintSvc_Samsung");
+
+# ------> SPlanner < ------ #
+delete_recursive("/system/app/SPlanner_M");
+
+# ------> withTV < ------ #
+delete_recursive("/system/app/withTV");
+
+# ------> Weather Widget < ------ #
+delete_recursive("/system/app/AccuweatherPhone2015");
+delete_recursive("/system/app/WeatherDaemon2015");
+
+# ------> Direct Pen Input < ------ #
+delete_recursive("/system/app/WritingBuddyService3");
+
+set_progress(0.200000);
+
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#      First Target has been eliminated        #");
+ui_print("#                                              #");
+ui_print("#                   >:)                        #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+set_progress(0.300000);
+
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#          Locating next target...             #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+set_progress(0.400000);
+
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#      Next target located > /priv-app         #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+set_progress(0.500000);
+
+# ------> Secret Phone Code Apps < ------ #
+delete_recursive("/system/priv-app/AutomationTest_FB");
+delete_recursive("/system/priv-app/PhoneErrService");
+delete_recursive("/system/priv-app/serviceModeApp_FB");
+delete_recursive("/system/priv-app/ServiceModeApp_RIL");
+delete_recursive("/system/priv-app/CSC");
+delete_recursive("/system/priv-app/DeviceTest");
+delete_recursive("/system/priv-app/DiagMonAgent");
+delete_recursive("/system/app/SecFactoryPhoneTest");
+delete_recursive("/system/app/WlanTest");
+delete_recursive("/system/app/BluetoothTest");
+delete_recursive("/system/app/FactoryCamera_FB");
+delete_recursive("/system/priv-app/HwModuleTest");
+
+# ------> Direct Share  < ------ #
+delete_recursive("/system/priv-app/Fmm");
+
+# ------> Easy Apps  < ------ #
+delete_recursive("/system/priv-app/EasyLauncher2_Zero");
+
+# ------> Accessibilty Apps  < ------ #
+delete_recursive("/system/priv-app/Hearingdro_V5");
+delete_recursive("/system/app/ColorBlind_M");
+delete_recursive("/system/app/AssistantMenu_M");
+
+# ------> Hs20  < ------ #
+delete_recursive("/system/app/Hs20Provider");
+
+# ------> SNS  < ------ #
+delete_recursive("/system/app/SnsImageCache");;
+delete_recursive("/system/priv-app/SNS_v2");
+
+# ------> IMS -  Wifi Calling  < ------ #
+delete_recursive("/system/priv-app/ImsLogger+");
+delete_recursive("/system/app/imsservice");
+delete_recursive("/system/app/ImsSettings");
+delete_recursive("/system/app/ImsTelephonyService");
+
+# ------> Samsung Kies < ------ #
+delete_recursive("/system/app/Kies");
+
+# ------> Live Wallpaper < ------ #
+delete_recursive("/system/priv-app/SecLiveWallpapersPicker");
+
+# ------> Personal Page / Private Mode < ------ #
+delete_recursive("/system/priv-app/PersonalPageService");
+
+# ------> Sim Card Apps < ------ #
+delete_recursive("/system/priv-app/OmaCP");
+delete_recursive("/system/app/Omc");
+delete_recursive("/system/app/Stk");
+delete_recursive("/system/app/Stk2");
+
+# ------> Photo Studio < ------ #
+delete_recursive("/system/priv-app/PhotoStudio_WQHD_Noble");
+
+# ------> Galaxy App Store < ------ #
+delete_recursive("/system/priv-app/GalaxyApps_3xh_noble");
+
+# ------> Samsung Services < ------ #
+delete_recursive("/system/priv-app/BackupRestoreConfirmation");
+delete_recursive("/system/priv-app/SamsungBilling");
+delete_recursive("/system/priv-app/SamsungMagnifier2");
+delete_recursive("/system/priv-app/sCloudBackupAppMOSUpgrade");
+delete_recursive("/system/app/SamsungContentsAgent");
+delete_recursive("/system/priv-app/SCloudService");
+delete_recursive("/system/priv-app/SPPPushClient_Prod");
+delete_recursive("/system/priv-app/SOAgent");
+delete_recursive("/system/priv-app/SPDClient");
+
+# ------> Samsung Music App < ------ #
+delete_recursive("/system/priv-app/SMusicPicker");
+delete_recursive("/system/priv-app/SMusic");
+
+# ------> Scrapbook < ------ #
+delete_recursive("/system/priv-app/Scrapbook");
+
+# ------> Samsung File Explorer < ------ #
+delete_recursive("/system/priv-app/SecMyFiles");
+
+# ------> Video Player < ------ #
+delete_recursive("/system/priv-app/ZVideo");
+delete_recursive("/system/priv-app/VideoCollage_Hero");
+delete_recursive("/system/app/VideoTrimmer");
+delete_recursive("/system/app/HighlightPlayer_Hero");
+delete_recursive("/system/app/SlowMotion_Hero");
+
+# ------> SFinder and QuickConnect < ------ #
+delete_recursive("/system/priv-app/SFinder_v4");
+delete_recursive("/system/app/QuickConnect_40");
+delete_recursive("/system/app/QuickConnectBridge");
+
+# ------> SHealth < ------ #
+delete_recursive("/system/priv-app/SHealth4");
+delete_recursive("/system/priv-app/HealthService");
+
+# ------> SmartManager < ------ #
+delete_recursive("/system/priv-app/SmartManager_v3");
+delete_recursive("/system/priv-app/SmartManagerSDK");
+delete_recursive("/system/priv-app/SmartManager_v3_DeviceSecurity");
+delete_recursive("/system/priv-app/SmartManagerProvider");
+
+# ------> SVoice < ------ # 
+delete_recursive("/system/priv-app/SVoice_1.0");
+delete_recursive("/system/priv-app/SVoiceLang_EnglishPack_US_1.0");
+delete_recursive("/system/priv-app/SVoicePLM_1.0");
+
+# ------> Voice Recorder < ------ #
+delete_recursive("/system/priv-app/VoiceNote_4.0");
+
+# ------> VR Headset / Gear Manager < ------ #
+delete_recursive("/system/priv-app/VRSetupWizardStub");
+delete_recursive("/system/priv-app/RNB");
+delete_recursive("/system/priv-app/RNBShell");
+delete_recursive("/system/priv-app/GearManager");
+delete_recursive("/system/app/GearManagerStub");
+
+# ------> Sound Alive < ------ #
+delete_recursive("/system/priv-app/SoundAlive_31_M");
+
+# ------> NFC < ------ #
+delete_recursive("/system/priv-app/Tag");
+delete_recursive("/system/priv-app/UrgentFWUpdateNfc");
+delete_recursive("/system/app/NfcNci");
+
+# ------> Google Now < ------ #
+delete_recursive("/system/priv-app/Velvet");
+delete_recursive("/system/priv-app/VoiceWakeUp");
+
+# ------> VPN and Sim Pin < ------ #
+delete_recursive("/system/app/EdmSimPinService");
+delete_recursive("/system/app/EdmVpnServices");
+delete_recursive("/system/priv-app/VpnDialogs");
+
+# ------> Microsoft Apps < ------ #
+delete_recursive("/system/app/OneNote");
+delete_recursive("/system/app/MSSkype_stub");
+delete_recursive("/system/app/OneDrive_Samsung_v2");
+delete_recursive("/system/priv-app/Excel_SamsungStub");
+delete_recursive("/system/priv-app/PowerPoint_SamsungStub");
+delete_recursive("/system/priv-app/Word_SamsungStub");
+
+# ------> Side Sync < ------ #
+delete_recursive("/system/app/Sidesync40");
+delete_recursive("/system/app/Sidesync_Source40");
+
+# ------> Remaining Scraps < ------ #
+delete_recursive("/system/priv-app/wssyncmlnps2");
+delete_recursive("/system/priv-app/intelligenceservice");
+delete_recursive("/system/priv-app/intelligenceservice2");
+delete_recursive("/system/priv-app/DCMProvider");
+delete_recursive("/system/priv-app/DCMService");
+delete_recursive("/system/priv-app/FotaAgent");
+delete_recursive("/system/priv-app/AutoPreconfig");
+delete_recursive("/system/priv-app/GoogleFeedback");
+delete_recursive("/system/app/YouTube");
+delete_recursive("/system/app/WebManual");
+delete_recursive("/system/app/WfdBroker");
+delete_recursive("/system/app/SecHTMLViewer");
+delete_recursive("/system/app/STalkback");
+delete_recursive("/system/app/SysScope");
+delete_recursive("/system/app/Preconfig");
+delete_recursive("/system/app/PreloadInstaller");
+delete_recursive("/system/app/SafetyInformation");
+delete_recursive("/system/app/Maps");
+delete_recursive("/system/app/MDMApp");
+delete_recursive("/system/app/RootPA");
+delete_recursive("/system/app/AASAservice");
+delete_recursive("/system/app/BBCAgent");
+delete_recursive("/system/app/GoogleTTS");
+delete_recursive("/system/app/ConfigUpdater");
+delete_recursive("/system/priv-app/SetupWizard");
+delete_recursive("/system/app/Chrome");
+delete_recursive("/system/app/ChromeCustomizations");
+delete_recursive("/system/app/Drive");
+delete_recursive("/system/app/FBAppManager");
+delete_recursive("/system/app/FBInstagram_stub");
+delete_recursive("/system/app/Hangouts");
+delete_recursive("/system/app/KnoxAttestationAgent");
+delete_recursive("/system/app/KnoxFolderContainer");
+delete_recursive("/system/app/KnoxSetupWizardClient");
+delete_recursive("/system/app/KnoxAppsUpdateAgent");
+delete_recursive("/system/app/Music2");
+delete_recursive("/system/app/RCPComponents");
+delete_recursive("/system/app/SecurityLogAgent");
+delete_recursive("/system/app/KnoxSwitcher");
+delete_recursive("/system/app/MyKNOXSetupWizard");
+delete_recursive("/system/app/UniversalMDMClient");
+delete_recursive("/system/app/WhatsAppDownloader");
+delete_recursive("/system/app/Videos");
+delete_recursive("/system/container");
+delete_recursive("/system/priv-app/FBInstaller");
+delete_recursive("/system/priv-app/KLMSAgent");
+delete_recursive("/system/app/IWlanContentProvider");
+delete_recursive("/system/priv-app/MyPlaces_Hero");
+delete_recursive("/system/priv-app/SendHelpMessage");
+delete_recursive("/system/priv-app/SmartSwitchAgent");
+delete_recursive("/system/app/BookmarkProvider");
+delete_recursive("/system/app/bootagent");
+delete_recursive("/system/app/DRParser");
+delete_recursive("/system/app/FidoUafClient");
+delete_recursive("/system/app/Foundation");
+delete_recursive("/system/app/GalaxyAppsWidget_Phone");
+delete_recursive("/system/app/GameOptimizer");
+delete_recursive("/system/app/MapconContentProvider");
+delete_recursive("/system/app/Photos");
+delete_recursive("/system/app/SimpleSharing");
+delete_recursive("/system/app/SmartSwitchAgent");
+delete_recursive("/system/app/TuiService");
+delete_recursive("/system/app/UniversalSwitch");
+delete_recursive("/system/priv-app/CarrierConfig");
+delete_recursive("/system/priv-app/FidoUafAsm");
+delete_recursive("/system/priv-app/ringtoneBR");
+delete_recursive("/system/priv-app/SKMSAgent");
+delete_recursive("/system/priv-app/StoryService");
+delete_recursive("/system/priv-app/TransmitPowerService");
+delete_recursive("/system/priv-app/UrgentFWUpdate");
+
+set_progress(0.900000);
+
+unmount("/system");
+
+ui_print(" ");
+ui_print("================================================");
+ui_print("#                                              #");
+ui_print("#            Your ROM is now clean             #");
+ui_print("#                                              #");
+ui_print("#       All enemies have been eliminated       #");
+ui_print("#                                              #");
+ui_print("#             Brought to you by:               #");
+ui_print("#        Battlehero @ XDA-Developers.com       #");
+ui_print("#                                              #");
+ui_print("================================================");
+ui_print(" ");
+
+set_progress(1.000000);
+
+ui_print(" ");
